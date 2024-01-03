@@ -35,6 +35,7 @@ for alpha = 0.8:0.2:0.8 % spectral norm of A
                 for i = 1:numel(A_)
                     num = count(i);
                     A_{i} = randi([1 10],1) * binornd(1,p,num,num); %randomly assign 1s to each block
+                    % Error aca por no tener el complemento instalado
                     gt = [gt i*ones(1,num)]; % cluster id
                 end
                 A = blkdiag(A_{:});
